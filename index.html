@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css"  rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Playfair+Display&family=Dosis&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        function updateMathContent(s) {
+            var math = MathJax.Hub.getAllJax("mathdiv")[0];
+            MathJax.Hub.Queue(["Text", math, s]);
+        }
+     </script>
+    <title>Quiz-beta</title>
+    
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <div class="container">
+       <div id ="preamble">
+           <img src="https://i.kym-cdn.com/photos/images/original/001/605/366/7f8.jpg" style="max-width: 80%; margin: auto;">
+           <h1>Fluids and Electrolytes</h1>
+           <p>Choose the answer that  is best characterized by the questions. <br> Watch out for answeres with the (S/S) tag as they go with questions that lists the signs and symptoms!</p>
+           <p>Good Luck!</p>
+           <br>
+           <!-- <form>
+               <h3>Number of Questions: </h3>
+            <input placeholder="1-150" id="QNo" />
+            <button id="add-btn">Go</button>
+          </form> -->
+        </div>
+       <div class="row" style="height: 120px;">
+            <h2 class="display hide"></h2>
+       </div>
+    <div id="mathdiv">
+            <div id="questcont" class ="hide row">
+                <div id="static-question"><span id="question">Question</span></div>
+                <div id ="ans-btns" class = "btn-OffRd">
+                    <button class="btn" id="ansBtn">ANSi</button>
+                    <button class="btn" id="ansBtn">ANSi</button>
+                    <button class="btn" id="ansBtn">ANSi</button>
+                    <button class="btn" id="ansBtn">ANSi</button>
+                </div>
+            </div>
+    </div>
+        <div class="row results hide">
+            <h1 class="score"></h1>
+            <h2 class="timeLeft"></h2>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+            <div class="timer hide" >
+                <div class="time">
+                    <div id="minutes">4</div>
+                    <div id="seconds">20</div>
+                </div>  
+            </div>
+            <div class="controls">
+                <button id="start-btn" class = "start-btn btn">Start</button>
+                <button id="next-btn", class = "next-btn btn hide">Next</button>
+            </div>    
+       </div>
+   </div> 
+   <script src="./script.js"></script>
+</body>
+</html>
